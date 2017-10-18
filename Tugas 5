@@ -1,0 +1,97 @@
+#include <iostream.h>
+#include <conio.h>
+#include <stdio.h>
+#include <stdlib.h>
+
+main(){
+   char nopeg[10],nama[35];
+   int jml_lembur,jml_anak,gajipokok;
+   int gp_operator,gp_manajer,jabatan,status;
+   int tunjangan,uanglembur,totalgaji;
+
+   gp_operator = 2000000;
+   gp_manajer = 3500000;
+
+   system("color 9F");
+
+	 cout << "Nomor Pegawai : "; gets(nopeg);
+	 cout << "Nama Pegawai  : "; gets(nama);
+   cout << endl;
+	 cout << "Jabatan (Input Angka)" << endl;
+   cout << "1.Operator/2.Manajer : "; cin >> jabatan;
+   cout << endl;
+	 cout << "Jumlah Jam Lembur per Bulan : "; cin >> jml_lembur;
+   cout << endl;
+	 cout << "Status Pernikahan" << endl;
+   cout << "1.Lajang/2.Menikah/3.Menikah Mempunyai Anak : "; cin >> status;
+   cout << endl;
+   if(status == 3){
+		cout << "Jumlah anak : "; cin >> jml_anak;
+   }
+   system("cls");
+   cout << "Aplikasi Untuk Menghitung Gaji" << endl;
+   cout << "====================================================" << endl <<endl;
+
+   //Input Gaji Pokok
+   if(jabatan == 1){
+   	gajipokok = 2000000;
+   }else if(jabatan == 2){
+   	gajipokok = 3500000;
+   }
+
+   cout << "Nomor Pegawai     : " << nopeg << endl;
+   cout << "Nama Pegawai      : " << nama << endl;
+
+   //Jabatan
+   if(jabatan == 1){
+   	cout << "Jabatan           : Operator" << endl;
+   }else if(jabatan == 2){
+   	cout << "Jabatan           : Manajer" << endl;
+   }
+
+   //Status Pernikahan
+   if(status == 1){
+   	cout << "Status Pernikahan : Lajang"<< endl;
+   }else if(status == 2){
+   	cout << "Status Pernikahan : Menikah" << endl;
+   }else if(status == 3){
+   	cout << "Status Pernikahan : Menikah dan punya Anak" << endl;
+   }
+
+
+   //Gaji Pokok
+   if(jabatan == 1){
+   	cout << "Gaji Pokok        : " << gajipokok << endl;
+   }else if(jabatan == 2){
+   	cout << "Gaji Pokok        : " << gajipokok << endl;
+   }
+
+   //Tunjangan
+	 if(status == 1)
+   {
+   	tunjangan = gajipokok*5/100;
+      cout << "Tunjangan         : " << tunjangan << endl;
+   }else if(status == 2){
+   	tunjangan = gajipokok*10/100;
+   	cout << "Tunjangan         : " << tunjangan << endl;
+   }else{
+   	tunjangan = gajipokok*15/100;
+      cout << "Tunjangan         : " << tunjangan << endl;
+   }
+
+   //Lembur
+   cout << "Jumlah Jam Lembur : " << jml_lembur << endl;
+   if(jml_lembur >= 20){
+   	jml_lembur = 20;
+   }
+
+   uanglembur = (gajipokok*2.5/100)*jml_lembur;
+   cout << "Jumlah uang lembur yang didapat : " << uanglembur << endl;
+
+   //Total Gaji
+   totalgaji = gajipokok + tunjangan + uanglembur;
+   cout << "Total Gaji Pegawai: " << totalgaji << endl << endl;
+   cout << "=============== Izra Ramadhan(c)2017 ===============";
+
+getch();
+}
