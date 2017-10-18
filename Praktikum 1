@@ -1,0 +1,20 @@
+#include <iostream.h>
+#include <conio.h>
+#include <stdio.h>
+#include <stdlib.h>
+
+main(){
+  double c,f;
+  system("color 9F");
+  cout << "Convert Celcius to Fahrenheit" << endl;
+  cout << "=============================" << endl;
+  cout << "Masukan Jumlah Celcious : "; cin >> c;
+
+  f=(c*1.8+32);
+
+  cout << "Suhu dalam Fahrenheit = " << f << " F" << endl;
+  cout << "=============================" << endl;
+
+
+  getch();
+}
