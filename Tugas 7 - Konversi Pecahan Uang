@@ -1,0 +1,45 @@
+#include <conio.h>
+#include <iostream>
+
+using namespace std;
+
+int uang;
+int a,b,c,d,e,f,sisa ;
+
+int main()
+{
+cout<<"masukkan Nilai Uang anda: "; cin>>uang;
+if(uang>=100000){ 
+	a=uang/100000;
+    uang=uang%100000;
+}
+if(uang>=50000){ 
+	b=uang/50000;
+    uang=uang%50000 ;
+}
+if(uang>=1000){ 
+	c=uang/1000;
+    uang=uang%1000 ;
+}
+if(uang>=500){ 
+	d=uang/500;
+    uang=uang%500 ;
+}
+if(uang>=100){ 
+	e=uang/100;
+    uang=uang%100 ;
+}
+if(uang>=50){ 
+	f=uang/50;
+    uang=uang%50 ;
+    sisa=uang%50 ;
+}
+cout<< a << " Pecahan Rp.100.000"<<endl;
+cout<< b << " Pecahan Rp.50.000"<<endl;
+cout<< c << " Pecahan Rp.1.000"<<endl;
+cout<< d << " Pecahan Rp.500"<<endl;
+cout<< e << " Pecahan Rp.100"<<endl;
+cout<< f << " Pecahan Rp.50"<<endl;
+
+	getch();
+}
