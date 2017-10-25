@@ -1,0 +1,40 @@
+#include<iostream>
+#include<conio.h>
+
+using namespace std;
+
+main() {
+    int a, b, c;
+    cout << "menentukan nilai terbesar 3 buah input \n";
+    cout << "masukkan bilangan ke-1 : "; cin >> a;
+    cout << "masukkan bilangan ke-2 : "; cin >> b;
+    cout << "masukkan bilangan ke-3 : "; cin >> c;
+    cout << "=====================" << endl;
+    // Terbesar
+	if ( a > b && a > c )
+        cout << "nilai terbesar   : " << a << endl;
+    else if ( b > a && b > c )
+        cout << "nilai terbesar   : " << b << endl;
+    else
+        cout << "nilai terbesar   : " << c << endl;
+        
+    // Terkecil
+    if ( a < b && a < c )
+        cout << "nilai terkecil   : " << a << endl;
+    else if ( b < a && b < c )
+        cout << "nilai terkecil   : " << b << endl;
+    else
+        cout << "nilai terkecil   : " << c << endl;
+    
+    if (a>0){
+		cout << "Bilangan terbesar adalah : Positive";
+	}else if(b>0){
+		cout << "Bilangan terbesar adalah : Positive";
+	}else if(c>0){
+		cout << "Bilangan terbesar adalah : Positive";
+	}else{
+		cout << "Bilangan terbesar adalah : negative";
+	}
+    
+    getch();
+}
