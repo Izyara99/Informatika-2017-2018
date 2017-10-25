@@ -1,0 +1,25 @@
+#include <conio.h>
+#include <iostream>
+
+using namespace std;
+
+int nilai;
+
+int main()
+{
+	cout << "Masukan Nilai = "; cin >> nilai;
+	if(nilai >= 80){
+		cout <<"A";
+	}else if(nilai >= 65){
+		cout <<"B";
+	}else if(nilai >= 50){
+		cout <<"C";
+	}else if(nilai >= 35){
+		cout <<"D";
+	}else if(nilai >= 0){
+		cout <<"E";
+	}else{
+		cout << "maaf saya DO";
+	}
+	getch();
+}
