@@ -1,0 +1,26 @@
+#include <iostream.h>
+#include <conio.h>
+#include <stdio.h>
+
+main(){
+	int tinggi,berat,hasil;
+   char nama[35],jk[2];
+   cout << "Masukan Nama Anda : "; gets(nama);
+   cout << "Masukan Jenis Kelamin Anda : "; cin >> jk;
+   cout << "Masukan Tinggi Badan Anda  : "; cin >> tinggi;
+   cout << "Masukan Berat Badan Anda   : "; cin >> berat;
+   cout << endl;
+   cout << "Selamar Datang Mr."<<nama<<endl;
+   cout << "Tinggi Badan Anda : " << tinggi << endl;
+   cout << "Berat Badan Anda  : " << berat << endl;
+   hasil = tinggi - 110;
+   if(berat > hasil && berat < hasil+15){
+   	cout << "Tubuh Ideal";
+   }else if(berat > hasil+15){
+      cout << "Tubuh Obesitas";
+   }else{
+   	cout << "Tubuh Terlalu Kurus";
+   }
+
+	getch();
+}
